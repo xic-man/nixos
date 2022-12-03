@@ -10,11 +10,11 @@
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, nur, ... }: {
-    nixosConfigurations.xic-framework = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.framework = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         nur.nixosModules.nur
-        home-manager.nixosModules.home-manager        
+        home-manager.nixosModules.home-manager
 
         ./configuration.nix
         ./hardware-configuration.nix
